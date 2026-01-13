@@ -33,6 +33,7 @@ body {
 #code-editor {
   background: gray;
   flex: 1;
+  height: 50%;
 }
 
 .CodeMirror {
