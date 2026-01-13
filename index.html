@@ -5,27 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>محرر أكواد مباشر</title>
 
-  <!-- استدعاء مكتبة CodeMirror -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/dist/codemirror.min.css">
+  <!-- مكتبات CodeMirror -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/material.css">
+
+  <!-- دعم لغات -->
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.js"></script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="editor-container">
-    <!-- شريط أدوات -->
-    <div class="toolbar">
-      <button id="copy-btn">نسخ الكود</button>
-    </div>
+<div class="editor-container">
 
-    <!-- مربع المحرر -->
-    <textarea id="code-editor" placeholder="اكتب كودك هنا"></textarea>
+  <!-- شريط الأدوات -->
+  <div class="toolbar">
+    <button id="copy-btn">نسخ الكود</button>
+  </div>
 
-    <!-- عرض النتيجة -->
-<iframe id="result" sandbox="allow-scripts allow-same-origin"></iframe>
+  <!-- المحرر -->
+  <textarea id="code-editor"></textarea>
 
-  <!-- مكتبات JS -->
-  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/dist/codemirror.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@codemirror/lang-html@6.1.1/dist/index.min.js"></script>
-  <script src="script.js"></script>
+  <!-- نافذة عرض النتيجة -->
+  <iframe id="result"></iframe>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
