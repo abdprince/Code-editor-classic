@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محرر أكواد مباشر</title>
+
+  <!-- استدعاء مكتبة CodeMirror -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/dist/codemirror.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="editor-container">
+    <!-- شريط أدوات -->
+    <div class="toolbar">
+      <button id="copy-btn">نسخ الكود</button>
+    </div>
+
+    <!-- مربع المحرر -->
+    <textarea id="code-editor" placeholder="اكتب كودك هنا"></textarea>
+
+    <!-- عرض النتيجة -->
+    <iframe id="result" sandbox="allow-scripts"></iframe>
+  </div>
+
+  <!-- مكتبات JS -->
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@6.0.1/dist/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@codemirror/lang-html@6.1.1/dist/index.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
