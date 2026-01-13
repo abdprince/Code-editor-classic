@@ -1,28 +1,44 @@
-// ربط المحرر
-import {EditorView, basicSetup} from "https://cdn.jsdelivr.net/npm/@codemirror/basic-setup@6.0.2/dist/index.min.js";
-import {html} from "https://cdn.jsdelivr.net/npm/@codemirror/lang-html@6.1.1/dist/index.min.js";
-
-const editor = new EditorView({
-  doc: "<!DOCTYPE html>\n<html>\n  <body>\n    <h1>مرحبا بك!</h1>\n  </body>\n</html>",
-  extensions: [basicSetup, html()],
-  parent: document.getElementById('code-editor')
+// إنشاء محرر CodeMirror
+const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
+  mode: "htmlmixed",  // يدعم HTML + CSS + JS
+  theme: "material",
+  lineNumbers: true,  // عرض أرقام الأسطر
+  tabSize: 2,
+  indentWithTabs: true,
+  lineWrapping: true
 });
 
-// تحديث العرض مباشرة عند الكتابة
-editor.dispatch({
-  effects: EditorView.updateListener.of(update => {
-    if (update.docChanged) {
-      const code = editor.state.doc.toString();
-      const resultFrame = document.getElementById('result');
-      resultFrame.srcdoc = code;
-    }
-  })
-});
+// الكود الافتراضي
+editor.setValue(`<!DOCTYPE html>
+<html>
+  <body>
+    <h1>مرحبا بك!</h1>
+  </body>
+</html>`);
+
+// ربط نافذة العرض لتحديث مباشر
+const iframe = document.getElementById('result');
+
+function updateResult() {
+  const code = editor.getValue();
+  iframe.contentWindow.document.open();
+  iframe.contentWindow.document.write(code);
+  iframe.contentWindow.document.close();
+}
+
+// تحديث العرض عند الكتابة مباشرة
+editor.on("change", updateResult);
+
+// تشغيل التحديث أول مرة
+updateResult();
 
 // زر النسخ
 document.getElementById('copy-btn').addEventListener('click', () => {
-  const code = editor.state.doc.toString();
+  const code = editor.getValue();
   navigator.clipboard.writeText(code).then(() => {
     alert('تم نسخ الكود!');
+  }).catch(err => {
+    alert('فشل النسخ، حاول مرة أخرى.');
+    console.error(err);
   });
 });
