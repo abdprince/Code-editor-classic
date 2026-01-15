@@ -11,8 +11,8 @@ body {
 }
 
 .toolbar {
-  background: #ccc;
-  color: #fff;
+  background: #333;
+  color: #ccc;
   padding: 5px;
   text-align: right;
 }
