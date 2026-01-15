@@ -12,7 +12,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
 editor.setValue(`<!DOCTYPE html>
 <html>
   <body>
-    <h1>مرحبا بك👋🏻 قم بتحرير الأكواد وأبدأ التعلم</h1>
+    <h1>مرحبا بك بمحرر الأكواد البسيط</h1>
   </body>
 </html>`);
 
