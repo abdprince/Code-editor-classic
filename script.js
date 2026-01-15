@@ -12,7 +12,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
 editor.setValue(`<!DOCTYPE html>
 <html>
   <body>
-    <h1>مرحبا بك!</h1>
+    <h1>مرحبا بك👋🏻 قم بتحرير الأكواد وأبدأ التعلم</h1>
   </body>
 </html>`);
 
@@ -36,7 +36,7 @@ updateResult();
 document.getElementById('copy-btn').addEventListener('click', () => {
   const code = editor.getValue();
   navigator.clipboard.writeText(code).then(() => {
-    alert('تم نسخ الكود!');
+    alert('تم النسخ');
   }).catch(err => {
     alert('فشل النسخ، حاول مرة أخرى.');
     console.error(err);
