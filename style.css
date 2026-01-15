@@ -33,16 +33,16 @@ body {
 #code-editor {
   background: gray;
   flex: 1;
-  height: 30%;
+  height: 50%;
 }
 
 .CodeMirror {
-  height: 100%;
+  height: 50%;
   font-size: 14px;
 }
 
 #result {
   flex: 1;
   border-top: 2px solid #ccc;
-  height: 70%;
+  height: 50%;
 }
