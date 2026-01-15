@@ -44,4 +44,5 @@ body {
 #result {
   flex: 1;
   border-top: 2px solid #ccc;
+  height: 50%;
 }
