@@ -33,7 +33,7 @@ body {
 #code-editor {
   background: gray;
   flex: 1;
-  height: 50%;
+  height: 30%;
 }
 
 .CodeMirror {
@@ -44,5 +44,5 @@ body {
 #result {
   flex: 1;
   border-top: 2px solid #ccc;
-  height: 50%;
+  height: 70%;
 }
