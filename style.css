@@ -14,13 +14,13 @@ body {
   background: #333;
   color: #ccc;
   padding: 5px;
-  text-align: left;
+  text-align: right;
 }
 
 .toolbar button {
   padding: 3px 10px;
   border: none;
-  background: #007bff;
+  background: #003bff;
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
