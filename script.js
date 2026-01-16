@@ -12,7 +12,8 @@ const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
 editor.setValue(`<!DOCTYPE html>
 <html>
   <body>
-    <h1>مرحبا بك بمحرر الأكواد البسيط</h1>
+    <h1>مرحبا بك</h1>
+    <p>ابدء بتحرير الأكواد بسهولة</p>
   </body>
 </html>`);
 
