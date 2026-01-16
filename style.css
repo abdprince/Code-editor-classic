@@ -13,9 +13,8 @@ body {
 .toolbar {
   background: #333;
   color: #ccc;
-  padding: 5px;
+  padding: 4px;
   text-align: right;
-  border-buttom: 2px solid #ddd;
 }
 
 .toolbar button {
@@ -38,7 +37,7 @@ body {
 }
 
 .CodeMirror {
-  height: 50%;
+  height: 40%;
   font-size: 14px;
 }
 
