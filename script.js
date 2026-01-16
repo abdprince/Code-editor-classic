@@ -11,6 +11,9 @@ const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
 // الكود الافتراضي
 editor.setValue(`<!DOCTYPE html>
 <html>
+<style>
+p{background: red;}
+</style>
   <body>
     <h1>مرحبا بك</h1>
     <p>ابدء بتحرير الأكواد بسهولة</p>
