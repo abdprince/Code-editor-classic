@@ -14,11 +14,11 @@ body {
   background: #333;
   color: #ccc;
   padding: 5px;
-  text-align: right;
+  text-align: left;
 }
 
 .toolbar button {
-  padding: 4px 10px;
+  padding: 3px 10px;
   border: none;
   background: #007bff;
   color: #fff;
