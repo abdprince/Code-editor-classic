@@ -15,6 +15,7 @@ body {
   color: #ccc;
   padding: 5px;
   text-align: right;
+  border-buttom: 2px solid #ddd;
 }
 
 .toolbar button {
