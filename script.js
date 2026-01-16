@@ -12,7 +12,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
 editor.setValue(`<!DOCTYPE html>
 <html>
 <style>
-p{background: #633;}
+p{background: #099;}
 </style>
   <body>
     <h1>مرحبا بك</h1>
