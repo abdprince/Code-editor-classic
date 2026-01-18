@@ -13,6 +13,7 @@ editor.setValue(`<!DOCTYPE html>
 <html>
 <head>
 <style>
+* {text-align: center;}
 p {background: #099;}
 </style>
 </head>
